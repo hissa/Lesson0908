@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <button @click="kon">こんにちは</button>
+        <button @click="oha">おはよう</button>
+        <button @click="noshi">さようなら</button>
+        <button @click="deleteAll" class="delete-all">全削除</button>
+        <ul>
+            <li v-for="(message, index) in messages">
+                {{ message }}
+                &nbsp;
+                <span @click="deleteMessage(index)" class="clickable">
+                    X
+                </span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.clickable {
+    cursor: pointer;
+}
+
+.delete-all {
+    color: red;
+}
